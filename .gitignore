@@ -1,0 +1,8 @@
+.DS_Store
+debug
+vendor
+example/example
+glide.lock
+.godebug.json
+*.so
+*.sh
