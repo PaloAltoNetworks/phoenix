@@ -13,7 +13,7 @@ func main() {
 	time.Local = time.UTC
 
 	phoenix.NewServer(
-		phoenix.NewHooksRegistry(examplePluginFunc),
+		phoenix.NewHooksRegistry(exampleHookFunc),
 		":44334",
 		cfg.CAPool,
 		[]tls.Certificate{cfg.ServerCertificate},
