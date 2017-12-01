@@ -16,6 +16,8 @@ func NewServer(
 	listenAddress string,
 	caPool *x509.CertPool,
 	serverCertificates []tls.Certificate,
+	enableHealth bool,
+	healthHandlerFunc bahamut.HealthServerFunc,
 ) bahamut.Server {
 	time.Local = time.UTC
 
@@ -32,7 +34,9 @@ func NewServer(
 	bahamutConfig.TLS.ServerCertificates = serverCertificates
 	bahamutConfig.TLS.AuthType = tls.RequireAndVerifyClientCert
 	bahamutConfig.ProfilingServer.Disabled = true
-	bahamutConfig.HealthServer.Disabled = true
+	bahamutConfig.HealthServer.Disabled = !enableHealth
+	bahamutConfig.HealthServer.HealthHandler = healthHandlerFunc
+	bahamutConfig.HealthServer.ListenAddress = ":80"
 	bahamutConfig.Model.RelationshipsRegistry = map[int]elemental.RelationshipsRegistry{0: rufusmodels.Relationships()}
 	bahamutConfig.Model.IdentifiablesFactory = func(i string, version int) elemental.Identifiable { return rufusmodels.IdentifiableForIdentity(i) }
 	bahamutConfig.WebSocketServer.Disabled = true
