@@ -18,6 +18,7 @@ func NewServer(
 	serverCertificates []tls.Certificate,
 	enableHealth bool,
 	healthHandlerFunc bahamut.HealthServerFunc,
+	healtListenAddress string,
 ) bahamut.Server {
 	time.Local = time.UTC
 
@@ -36,7 +37,7 @@ func NewServer(
 	bahamutConfig.ProfilingServer.Disabled = true
 	bahamutConfig.HealthServer.Disabled = !enableHealth
 	bahamutConfig.HealthServer.HealthHandler = healthHandlerFunc
-	bahamutConfig.HealthServer.ListenAddress = ":80"
+	bahamutConfig.HealthServer.ListenAddress = healtListenAddress
 	bahamutConfig.Model.RelationshipsRegistry = map[int]elemental.RelationshipsRegistry{0: rufusmodels.Relationships()}
 	bahamutConfig.Model.IdentifiablesFactory = func(i string, version int) elemental.Identifiable { return rufusmodels.IdentifiableForIdentity(i) }
 	bahamutConfig.WebSocketServer.Disabled = true
