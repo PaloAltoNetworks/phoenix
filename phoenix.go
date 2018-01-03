@@ -34,7 +34,6 @@ func NewServer(
 	bahamutConfig.TLS.RootCAPool = caPool
 	bahamutConfig.TLS.ServerCertificates = serverCertificates
 	bahamutConfig.TLS.AuthType = tls.RequireAndVerifyClientCert
-	bahamutConfig.ProfilingServer.Disabled = true
 	bahamutConfig.HealthServer.Disabled = !enableHealth
 	bahamutConfig.HealthServer.HealthHandler = healthHandlerFunc
 	bahamutConfig.HealthServer.ListenAddress = healtListenAddress
