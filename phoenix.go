@@ -28,8 +28,8 @@ func NewServer(
 	bahamutConfig.ReSTServer.DisableKeepalive = false
 	bahamutConfig.ReSTServer.IdleTimeout = 120 * time.Second
 	bahamutConfig.ReSTServer.ListenAddress = listenAddress
-	bahamutConfig.ReSTServer.ReadTimeout = 5 * time.Second
-	bahamutConfig.ReSTServer.WriteTimeout = 5 * time.Second
+	bahamutConfig.ReSTServer.ReadTimeout = 20 * time.Second
+	bahamutConfig.ReSTServer.WriteTimeout = 20 * time.Second
 	bahamutConfig.TLS.ClientCAPool = caPool
 	bahamutConfig.TLS.RootCAPool = caPool
 	bahamutConfig.TLS.ServerCertificates = serverCertificates
