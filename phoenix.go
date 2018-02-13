@@ -7,7 +7,7 @@ import (
 
 	"github.com/aporeto-inc/bahamut"
 	"github.com/aporeto-inc/elemental"
-	"github.com/aporeto-inc/gaia/rufusmodels/v1/golang"
+	"github.com/aporeto-inc/gaia/v1/golang"
 )
 
 // NewServer returns a new phoenix server with the given hook.
@@ -37,15 +37,15 @@ func NewServer(
 	bahamutConfig.HealthServer.Disabled = !enableHealth
 	bahamutConfig.HealthServer.HealthHandler = healthHandlerFunc
 	bahamutConfig.HealthServer.ListenAddress = healtListenAddress
-	bahamutConfig.Model.RelationshipsRegistry = map[int]elemental.RelationshipsRegistry{0: rufusmodels.Relationships()}
-	bahamutConfig.Model.IdentifiablesFactory = func(i string, version int) elemental.Identifiable { return rufusmodels.IdentifiableForIdentity(i) }
+	bahamutConfig.Model.RelationshipsRegistry = map[int]elemental.RelationshipsRegistry{0: gaia.Relationships()}
+	bahamutConfig.Model.IdentifiablesFactory = func(i string, version int) elemental.Identifiable { return gaia.IdentifiableForIdentity(i) }
 	bahamutConfig.WebSocketServer.Disabled = true
 
 	// Create a new Bahamut Server
 	server := bahamut.NewServer(bahamutConfig)
 
 	// Register all the processors
-	bahamut.RegisterProcessorOrDie(server, newRemoteProcessorProcessor(pluginsRegistry), rufusmodels.RemoteProcessorIdentity)
+	bahamut.RegisterProcessorOrDie(server, newRemoteProcessorProcessor(pluginsRegistry), gaia.RemoteProcessorIdentity)
 
 	return server
 }
