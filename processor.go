@@ -4,8 +4,7 @@ import (
 	"encoding/json"
 
 	"github.com/aporeto-inc/bahamut"
-	"github.com/aporeto-inc/gaia/rufusmodels/v1/golang"
-	"github.com/aporeto-inc/gaia/squallmodels/v1/golang"
+	"github.com/aporeto-inc/gaia/v1/golang"
 )
 
 type remoteProcessorProcessor struct {
@@ -23,8 +22,8 @@ func newRemoteProcessorProcessor(pluginsRegistry HooksRegistry) *remoteProcessor
 func (p *remoteProcessorProcessor) ProcessCreate(ctx *bahamut.Context) error {
 
 	// Retrieve input data
-	rp := ctx.InputData.(*rufusmodels.RemoteProcessor)
-	obj := squallmodels.IdentifiableForIdentity(rp.TargetIdentity)
+	rp := ctx.InputData.(*gaia.RemoteProcessor)
+	obj := gaia.IdentifiableForIdentity(rp.TargetIdentity)
 
 	if err := json.Unmarshal(rp.Input, &obj); err != nil {
 		return err
