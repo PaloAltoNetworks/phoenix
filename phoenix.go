@@ -39,7 +39,7 @@ func NewServer(
 	bahamutConfig.HealthServer.ListenAddress = healtListenAddress
 	bahamutConfig.Model.RelationshipsRegistry = map[int]elemental.RelationshipsRegistry{0: gaia.Relationships()}
 	bahamutConfig.Model.IdentifiablesFactory = func(i string, version int) elemental.Identifiable { return gaia.IdentifiableForIdentity(i) }
-	bahamutConfig.WebSocketServer.Disabled = true
+	bahamutConfig.PushServer.Disabled = true
 
 	// Create a new Bahamut Server
 	server := bahamut.NewServer(bahamutConfig)
