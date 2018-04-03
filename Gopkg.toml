@@ -1,7 +1,7 @@
 ## Aporeto
 [[constraint]]
   name = "github.com/aporeto-inc/bahamut"
-  version = "13.x"
+  version = "14.x"
 
 [[constraint]]
   name = "github.com/aporeto-inc/elemental"
