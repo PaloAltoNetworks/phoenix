@@ -1,16 +1,3 @@
-## Aporeto
-[[constraint]]
-  name = "github.com/aporeto-inc/bahamut"
-  version = "14.x"
-
-[[constraint]]
-  name = "github.com/aporeto-inc/elemental"
-  version = "3.x"
-
-[[constraint]]
-  name = "github.com/aporeto-inc/gaia"
-  version = "7.x"
-
 [prune]
   go-tests = true
   unused-packages = true
