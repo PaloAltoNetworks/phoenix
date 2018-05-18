@@ -24,8 +24,6 @@ func NewServer(
 
 	// Bahamut API Server configuration
 	bahamutConfig := bahamut.Config{}
-	bahamutConfig.ReSTServer.Disabled = false
-	bahamutConfig.ReSTServer.DisableKeepalive = false
 	bahamutConfig.ReSTServer.IdleTimeout = 240 * time.Second
 	bahamutConfig.ReSTServer.ListenAddress = listenAddress
 	bahamutConfig.ReSTServer.ReadTimeout = 60 * time.Second
