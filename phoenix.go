@@ -20,27 +20,25 @@ func NewServer(
 	healthHandlerFunc bahamut.HealthServerFunc,
 	healtListenAddress string,
 ) bahamut.Server {
-	time.Local = time.UTC
 
-	// Bahamut API Server configuration
-	bahamutConfig := bahamut.Config{}
-	bahamutConfig.ReSTServer.IdleTimeout = 240 * time.Second
-	bahamutConfig.ReSTServer.ListenAddress = listenAddress
-	bahamutConfig.ReSTServer.ReadTimeout = 60 * time.Second
-	bahamutConfig.ReSTServer.WriteTimeout = 120 * time.Second
-	bahamutConfig.TLS.ClientCAPool = caPool
-	bahamutConfig.TLS.RootCAPool = caPool
-	bahamutConfig.TLS.ServerCertificates = serverCertificates
-	bahamutConfig.TLS.AuthType = tls.RequireAndVerifyClientCert
-	bahamutConfig.HealthServer.Disabled = !enableHealth
-	bahamutConfig.HealthServer.HealthHandler = healthHandlerFunc
-	bahamutConfig.HealthServer.ListenAddress = healtListenAddress
-	bahamutConfig.Model.RelationshipsRegistry = map[int]elemental.RelationshipsRegistry{0: gaia.Relationships()}
-	bahamutConfig.Model.IdentifiablesFactory = func(i string, version int) elemental.Identifiable { return gaia.IdentifiableForIdentity(i) }
-	bahamutConfig.PushServer.Disabled = true
+	time.Local = time.UTC
+	factory := func(i string, version int) elemental.Identifiable { return gaia.IdentifiableForIdentity(i) }
+	registry := map[int]elemental.RelationshipsRegistry{0: gaia.Relationships()}
+
+	options := []bahamut.Option{
+		bahamut.OptRestServer(listenAddress),
+		bahamut.OptTLS(serverCertificates, nil),
+		bahamut.OptMTLS(caPool, tls.RequireAndVerifyClientCert),
+		bahamut.OptModel(factory, registry),
+		bahamut.OptTimeouts(60*time.Second, 120*time.Second, 240*time.Second),
+	}
+
+	if enableHealth {
+		options = append(options, bahamut.OptHealthServer(healtListenAddress, healthHandlerFunc))
+	}
 
 	// Create a new Bahamut Server
-	server := bahamut.NewServer(bahamutConfig)
+	server := bahamut.New(options...)
 
 	// Register all the processors
 	bahamut.RegisterProcessorOrDie(server, newRemoteProcessorProcessor(pluginsRegistry), gaia.RemoteProcessorIdentity)
