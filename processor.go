@@ -23,7 +23,7 @@ func (p *remoteProcessorProcessor) ProcessCreate(ctx *bahamut.Context) error {
 
 	// Retrieve input data
 	rp := ctx.InputData.(*gaia.RemoteProcessor)
-	obj := gaia.Factory().IdentifiableFromString(rp.TargetIdentity)
+	obj := gaia.Manager().IdentifiableFromString(rp.TargetIdentity)
 
 	if err := json.Unmarshal(rp.Input, &obj); err != nil {
 		return err

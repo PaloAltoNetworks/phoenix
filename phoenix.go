@@ -22,13 +22,13 @@ func NewServer(
 ) bahamut.Server {
 
 	time.Local = time.UTC
-	gaiaFactories := map[int]elemental.IdentifiableFactory{0: gaia.Factory(), 1: gaia.Factory()}
+	modelManagers := map[int]elemental.ModelManager{0: gaia.Manager(), 1: gaia.Manager()}
 
 	options := []bahamut.Option{
 		bahamut.OptRestServer(listenAddress),
 		bahamut.OptTLS(serverCertificates, nil),
 		bahamut.OptMTLS(caPool, tls.RequireAndVerifyClientCert),
-		bahamut.OptModel(gaiaFactories),
+		bahamut.OptModel(modelManagers),
 		bahamut.OptTimeouts(60*time.Second, 120*time.Second, 240*time.Second),
 	}
 
