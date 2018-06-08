@@ -3,8 +3,8 @@ package phoenix
 import (
 	"encoding/json"
 
-	"github.com/aporeto-inc/bahamut"
-	"github.com/aporeto-inc/gaia/v1/golang"
+	"go.aporeto.io/bahamut"
+	"go.aporeto.io/gaia/v1/golang"
 )
 
 type remoteProcessorProcessor struct {

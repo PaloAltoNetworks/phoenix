@@ -5,9 +5,9 @@ import (
 	"crypto/x509"
 	"time"
 
-	"github.com/aporeto-inc/bahamut"
-	"github.com/aporeto-inc/elemental"
-	"github.com/aporeto-inc/gaia/v1/golang"
+	"go.aporeto.io/bahamut"
+	"go.aporeto.io/elemental"
+	"go.aporeto.io/gaia/v1/golang"
 )
 
 // NewServer returns a new phoenix server with the given hook.

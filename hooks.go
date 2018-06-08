@@ -1,8 +1,8 @@
 package phoenix
 
 import (
-	"github.com/aporeto-inc/elemental"
-	"github.com/aporeto-inc/gaia/v1/golang"
+	"go.aporeto.io/elemental"
+	"go.aporeto.io/gaia/v1/golang"
 )
 
 // HookFunc is the type of a function to that can be used as a Hook.
