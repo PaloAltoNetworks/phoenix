@@ -7,7 +7,7 @@ import (
 
 	"go.aporeto.io/bahamut"
 	"go.aporeto.io/elemental"
-	"go.aporeto.io/gaia/v1/golang"
+	"go.aporeto.io/gaia"
 )
 
 // NewServer returns a new phoenix server with the given hook.

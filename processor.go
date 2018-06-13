@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 
 	"go.aporeto.io/bahamut"
-	"go.aporeto.io/gaia/v1/golang"
+	"go.aporeto.io/gaia"
 )
 
 type remoteProcessorProcessor struct {
