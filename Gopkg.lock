@@ -123,19 +123,19 @@
     "tagutils",
     "wsc"
   ]
-  revision = "2ba0d015f9b6a379e0b83aa8c3deeca6e8909dc0"
-  version = "v10.2.1"
+  revision = "a8f54b25ffc97d668f68fa497f4894ac6ccfbb74"
+  version = "v10.2.0"
 
 [[projects]]
   name = "go.aporeto.io/bahamut"
   packages = ["."]
-  revision = "1d84ff67869515e618d856e62afa8815e1d19ffa"
+  revision = "7a1b1b890b65749ddbf71bcca894c1a0167f53a6"
   version = "v17.7.1"
 
 [[projects]]
   name = "go.aporeto.io/elemental"
   packages = ["."]
-  revision = "eb16676f7166d109fcf7ffe0ce4d839e79803fe8"
+  revision = "aec735eb01b585a50f91f1bfcaf22c82784c36ee"
   version = "v4.2.1"
 
 [[projects]]
@@ -145,7 +145,7 @@
     "constants",
     "types"
   ]
-  revision = "080402fd6978a20f29e28dd5b354d668329d3109"
+  revision = "88b078e3e5f2c2057acd0b4aa0d347e251266301"
   version = "v12.1.1"
 
 [[projects]]
