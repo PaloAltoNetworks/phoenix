@@ -19,10 +19,10 @@ func newRemoteProcessorProcessor(pluginsRegistry HooksRegistry) *remoteProcessor
 }
 
 // ProcessCreate is triggered with a new plugin
-func (p *remoteProcessorProcessor) ProcessCreate(ctx *bahamut.Context) error {
+func (p *remoteProcessorProcessor) ProcessCreate(ctx bahamut.Context) error {
 
 	// Retrieve input data
-	rp := ctx.InputData.(*gaia.RemoteProcessor)
+	rp := ctx.InputData().(*gaia.RemoteProcessor)
 	obj := gaia.Manager().IdentifiableFromString(rp.TargetIdentity)
 
 	if err := json.Unmarshal(rp.Input, &obj); err != nil {
@@ -38,7 +38,7 @@ func (p *remoteProcessorProcessor) ProcessCreate(ctx *bahamut.Context) error {
 
 	rp.Output = obj
 
-	ctx.OutputData = rp
+	ctx.SetOutputData(rp)
 
 	return nil
 }
