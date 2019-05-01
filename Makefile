@@ -8,7 +8,6 @@ PROJECT_RELEASE ?= dev
 ci: init lint test codecov
 
 init:
-	go get -u github.com/aporeto-inc/go-bindata/...
 	go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
 	dep ensure
 	dep status
