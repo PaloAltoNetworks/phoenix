@@ -3,7 +3,7 @@ module go.aporeto.io/phoenix
 go 1.12
 
 require (
-	go.aporeto.io/bahamut v1.72.0
+	go.aporeto.io/bahamut v1.75.0
 	go.aporeto.io/elemental v1.80.1
-	go.aporeto.io/gaia v1.18.0
+	go.aporeto.io/gaia v1.21.0
 )
