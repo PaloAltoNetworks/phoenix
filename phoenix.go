@@ -32,7 +32,6 @@ func NewServer(
 	healtListenAddress string,
 ) bahamut.Server {
 
-	time.Local = time.UTC
 	modelManagers := map[int]elemental.ModelManager{0: gaia.Manager(), 1: gaia.Manager()}
 
 	options := []bahamut.Option{
