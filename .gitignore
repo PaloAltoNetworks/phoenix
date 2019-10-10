@@ -6,3 +6,4 @@ glide.lock
 .godebug.json
 *.so
 Gopkg.lock
+*.cov
