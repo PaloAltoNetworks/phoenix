@@ -202,8 +202,8 @@ go.aporeto.io/bahamut v1.112.1-0.20191011202932-37ae7fb2f706 h1:N+HQRvyfEu/RrpXO
 go.aporeto.io/bahamut v1.112.1-0.20191011202932-37ae7fb2f706/go.mod h1:O83B5++o9MpDTgexau7/K0HpcxveeteIP5YFosKaadM=
 go.aporeto.io/elemental v1.100.1-0.20191011202922-1850db852060 h1:E3BJWtd+mnk9/LuNCsKbNjsgVMs3/ai+DZjQUkIiMjQ=
 go.aporeto.io/elemental v1.100.1-0.20191011202922-1850db852060/go.mod h1:Q4bWAA571p1BhSRtIfPSxPquP38m+s54q5Hku5qyHP0=
-go.aporeto.io/gaia v1.94.1-0.20191011202945-9d6989bccb62 h1:PisyDLSniKt+f947jYiBrWHCDsxceIUABIVpNNkgNaU=
-go.aporeto.io/gaia v1.94.1-0.20191011202945-9d6989bccb62/go.mod h1:fAUo+qnaPqHXITxJGgqGKhvOlmmsjWiTj30DzYVZjFk=
+go.aporeto.io/gaia v1.94.1-0.20191017050833-ba8d365802a6 h1:NNrIOHAq9LmwEfWXyChCUHXymFmHyfE1Ngxr14xnjQM=
+go.aporeto.io/gaia v1.94.1-0.20191017050833-ba8d365802a6/go.mod h1:fAUo+qnaPqHXITxJGgqGKhvOlmmsjWiTj30DzYVZjFk=
 go.aporeto.io/regolithe v1.50.1-0.20191011181323-a84eb0eb88ba/go.mod h1:n5Wi2kGXJ+eZe4fUTiVZ++RlgIo3DKiG71I7TV1Pfz4=
 go.aporeto.io/wsc v1.36.1-0.20191011180831-23743fa5722b h1:a9MuXHcZzo5ql7t19MM8xHl7AZIul9fdBW/KmdebO+s=
 go.aporeto.io/wsc v1.36.1-0.20191011180831-23743fa5722b/go.mod h1:rsvRdSfv4+nUKVKF+JcCh0dLXzoiAUhD9cBt/OiB4c8=
