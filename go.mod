@@ -1,6 +1,6 @@
 module go.aporeto.io/phoenix
 
-go 1.12
+go 1.13
 
 require (
 	go.aporeto.io/bahamut v1.112.1-0.20191025224319-2699a969538b
