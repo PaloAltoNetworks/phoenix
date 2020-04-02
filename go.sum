@@ -250,8 +250,8 @@ github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415/go.mod h1:
 github.com/xeipuuv/gojsonschema v1.2.0/go.mod h1:anYRn/JVcOK2ZgGU+IjEV4nwlhoK5sQluxsYJ78Id3Y=
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
-go.aporeto.io/bahamut v1.112.1-0.20200402223517-2c3eecc898e4 h1:8x3stmEaqlhJ7cbBUoj9si33ERZHWrkmjT9+YtvrEn4=
-go.aporeto.io/bahamut v1.112.1-0.20200402223517-2c3eecc898e4/go.mod h1:uMtTDYpkuo3KEspcCS+t+2pobjhGoxI3UizGUIMb9Rg=
+go.aporeto.io/bahamut v1.112.1-0.20200402223722-1c459a6fc9f3 h1:jlZTO3LVbqW2IgtC1pCv2IAMgzDN0FMdXv9Y0Nvp29k=
+go.aporeto.io/bahamut v1.112.1-0.20200402223722-1c459a6fc9f3/go.mod h1:G4/CpFPo9d3vzkgzKwHeCRQxRnShCMD0ncwyH3NT7jQ=
 go.aporeto.io/elemental v1.100.1-0.20200402223456-9d2744ff9f21 h1:zbhvQo1gZObX5XGng5QnvR0XHdEzT0XxljZsqxDmH9A=
 go.aporeto.io/elemental v1.100.1-0.20200402223456-9d2744ff9f21/go.mod h1:rGo+z8lGU6pC3Oa1vmk+7Z8dP23xVn60o6F952cNtNo=
 go.aporeto.io/gaia v1.94.1-0.20200402223533-6ceacf9f89e4 h1:HRqD4Z/4JkuVR+hkHyZUzziLaNj1gejT/gtLjBtqetc=
