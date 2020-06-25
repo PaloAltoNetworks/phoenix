@@ -7,3 +7,4 @@ glide.lock
 *.so
 Gopkg.lock
 *.cov
+dist
