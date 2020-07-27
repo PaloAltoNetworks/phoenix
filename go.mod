@@ -3,9 +3,9 @@ module go.aporeto.io/phoenix
 go 1.13
 
 require (
-	go.aporeto.io/bahamut v1.112.1-0.20200507180707-94451856cd84
-	go.aporeto.io/elemental v1.100.1-0.20200507180645-f7ef7a598da7
-	go.aporeto.io/gaia v1.94.1-0.20200623223310-c645667bcea6
+	go.aporeto.io/bahamut v1.120.1-0.20200727181614-52ae2bf09747
+	go.aporeto.io/elemental v1.110.1-0.20200727181545-6c1a947be3d0
+	go.aporeto.io/gaia v1.100.1-0.20200727181632-cb01f9acb491
 )
 
 require github.com/smartystreets/assertions v1.0.1 // indirect
