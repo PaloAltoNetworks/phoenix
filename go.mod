@@ -3,9 +3,9 @@ module go.aporeto.io/phoenix
 go 1.13
 
 require (
-	go.aporeto.io/bahamut v1.112.1-0.20201209195311-ab0f684f103e
+	go.aporeto.io/bahamut v1.112.1-0.20201215225049-d13f289282c8
 	go.aporeto.io/elemental v1.100.1-0.20201110214307-3e4e638fb38b
-	go.aporeto.io/gaia v1.94.1-0.20201215190023-f7ed2fb286ad
+	go.aporeto.io/gaia v1.94.1-0.20201215224751-7d72a94126e5
 )
 
 require (
