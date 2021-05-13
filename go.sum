@@ -307,12 +307,12 @@ github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:
 github.com/yl2chen/cidranger v1.0.2 h1:lbOWZVCG1tCRX4u24kuM1Tb4nHqWkDxwLdoS+SevawU=
 github.com/yl2chen/cidranger v1.0.2/go.mod h1:9U1yz7WPYDwf0vpNWFaeRh0bjwz5RVgRy/9UEQfHl0g=
 github.com/yuin/goldmark v1.1.32/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
-go.aporeto.io/bahamut v1.112.1-0.20210428235135-dc858bec4307 h1:/YyMh7tb6Z/IiA8kz2fbcmx1tx0YxYQjHBbzeD/DPSQ=
-go.aporeto.io/bahamut v1.112.1-0.20210428235135-dc858bec4307/go.mod h1:YRr14Gf686o5BQHsGGhB0coxAKNPUjmIYbktACLp/vI=
+go.aporeto.io/bahamut v1.112.1-0.20210511234020-d223af0361d8 h1:vM1YiCtydYHozF3vnVu/6t/y0RVuvAXQxB95bQuc0Rc=
+go.aporeto.io/bahamut v1.112.1-0.20210511234020-d223af0361d8/go.mod h1:YRr14Gf686o5BQHsGGhB0coxAKNPUjmIYbktACLp/vI=
 go.aporeto.io/elemental v1.100.1-0.20210428215439-6059ff91f9f7 h1:JOC4BEStOIkz76PiNUuGeYt6iHXqGc29NxJbYDw06YM=
 go.aporeto.io/elemental v1.100.1-0.20210428215439-6059ff91f9f7/go.mod h1:PIPBBu7d/Feb43jWR2o+tBHUZsYgJSbvB/7IWAUnXfI=
-go.aporeto.io/gaia v1.94.1-0.20210428215530-13d01564b3e0 h1:IF5Iu3vABZOY0+gtJLkx4yz9Qk14D3CzBjd8zK8tjHI=
-go.aporeto.io/gaia v1.94.1-0.20210428215530-13d01564b3e0/go.mod h1:pQPCedYDOXY4alg97Ab5BEfhqr5F67vaBScSKY7gx3A=
+go.aporeto.io/gaia v1.94.1-0.20210513024422-35cbd06eda57 h1:yRV1MtyzoZGJTDCoVcwJPFJ9GBza+xKzdrRS16oLrUQ=
+go.aporeto.io/gaia v1.94.1-0.20210513024422-35cbd06eda57/go.mod h1:pQPCedYDOXY4alg97Ab5BEfhqr5F67vaBScSKY7gx3A=
 go.aporeto.io/regolithe v1.50.1-0.20210426235633-b469f0c145a4/go.mod h1:YnJqIj7KOAiAiSI7vPs3ELLjrbBdrOsouRRPLMyUlGA=
 go.aporeto.io/tg v1.34.1-0.20210427202027-51db463efa40/go.mod h1:lOiXtTqFG+QtMe52FzXEJqTcZWOrLqrYiy5vWg2HaJc=
 go.aporeto.io/wsc v1.36.1-0.20210422182307-cde7d2b8a7eb h1:Mn7d8nB0YUudTDLftdNONOV0k3Sf9Oc7Cl0xB+j6ajc=
