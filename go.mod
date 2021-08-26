@@ -5,7 +5,7 @@ go 1.13
 require (
 	go.aporeto.io/bahamut v1.112.1-0.20210707025231-8ab300c77971
 	go.aporeto.io/elemental v1.100.1-0.20210706184354-966eab3720af
-	go.aporeto.io/gaia v1.94.1-0.20210809205629-5ee0a82171f5
+	go.aporeto.io/gaia v1.94.1-0.20210824221000-5f46e0956013
 )
 
 require (
