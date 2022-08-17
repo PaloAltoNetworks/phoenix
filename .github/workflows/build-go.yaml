@@ -19,8 +19,9 @@ jobs:
       fail-fast: false
       matrix:
         go:
-          - 1.15
-          - 1.16
+          - 1.17
+          - 1.18
+          - 1.19
     steps:
       - uses: actions/checkout@v2
 
@@ -31,11 +32,22 @@ jobs:
       - name: setup
         run: |
           go version
-          go get github.com/golangci/golangci-lint/cmd/golangci-lint@latest
-          go get github.com/securego/gosec/cmd/gosec
-          #go get golang.org/x/tools/cmd/cover
-          go get github.com/axw/gocov/gocov
-          go get github.com/AlekSi/gocov-xml
+          go install github.com/securego/gosec/cmd/gosec@latest
+          #go install golang.org/x/tools/cmd/cover@latest
+          go install github.com/axw/gocov/gocov@master
+          go install github.com/AlekSi/gocov-xml@latest
+
+      - name: setup-for-older-go
+        if: ${{ matrix.go <= 1.17 }}
+        run: |
+          # stay on an older version of golangci-lint which still builds against 1.17
+          # This is due to the introduction of generics.
+          go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.47.3
+
+      - name: setup-for-newer-go
+        if: ${{ matrix.go > 1.17 }}
+        run: |
+          go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 
       - name: build
         run: |
