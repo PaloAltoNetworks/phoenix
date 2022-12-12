@@ -6,5 +6,5 @@ glide.lock
 .godebug.json
 *.so
 Gopkg.lock
-*.cov
+unit_coverage.out
 dist
